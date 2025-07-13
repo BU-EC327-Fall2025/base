@@ -1,4 +1,4 @@
-name: Trigger HW1 Central Tests
+name: Trigger Central Tests
 
 on:
   pull_request:
@@ -8,9 +8,9 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Call Central HW1 Test Runner
+      - name: Call Central Test Runner
         run: |
           curl -X POST -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.TEST_TRIGGER_TOKEN }}" \
-            https://api.github.com/repos/BU-EC327-Fall2025/hw1-tests/dispatches \
+            https://api.github.com/repos/BU-EC327-Fall2025/lab2-tests/dispatches \
             -d "{\"event_type\": \"run-tests\", \"client_payload\": {\"repo\": \"${{ github.repository }}\", \"pr\": \"${{ github.event.pull_request.number }}\"}}"
