@@ -20,6 +20,5 @@ std::string diagonalStars(int n) {
         }
     }
 
-
     return result;
 }
