@@ -4,7 +4,7 @@ std::string diagonalStars(int n) {
     std::string result = "";
 
     if (n < 1) {
-        return "Not Supporte";
+        return "Not Supporta";
     }
 
     for (int row = 0; row < n; row++) {
